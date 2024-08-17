@@ -1,0 +1,69 @@
+#experiencia {
+  padding: 1rem 0 6rem 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.logos {
+  overflow: hidden;
+  padding: 4rem 0;
+  white-space: nowrap;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide img {
+  height: 100px;
+  padding: 0 2rem;
+}
+
+.exp-btn {
+  padding: 0.3rem 4.5rem;
+  border-radius: 8px;
+  border: solid 1px var(--white);
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  display: inline-block;
+  transition: 0.5s ease-in;
+}
+
+.exp-btn:hover {
+  border-color: var(--main-green);
+  color: var(--main-green);
+  transition: 0.5s ease-out;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 767px) {
+  .logos-slide img {
+    height: 50px;
+  }
+  .exp-btn {
+    font-size: 16px;
+  }
+  #experiencia h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+@media (max-width: 425px) {
+  #experiencia h1 {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+}

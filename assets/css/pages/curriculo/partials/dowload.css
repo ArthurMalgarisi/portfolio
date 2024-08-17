@@ -1,0 +1,59 @@
+#curriculo {
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  text-align: center;
+  height: 92vh;
+}
+
+#curriculo h1 {
+  margin-top: 25vh;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.btn-download {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    rgba(66, 245, 0, 1) 0%,
+    rgba(0, 170, 224, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 4rem;
+}
+
+.btn-download a {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 6rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.5s ease-in;
+}
+
+.btn-download a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  #curriculo h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+  .btn-download a {
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    padding: 0.8rem 6rem; /* Ajuste o padding conforme necessário */
+  }
+}
+
+@media (max-width: 640px) {
+  #curriculo h1 {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+  .btn-download a {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    padding: 0.5rem 1.5rem; /* Ajuste o padding conforme necessário */
+  }
+}

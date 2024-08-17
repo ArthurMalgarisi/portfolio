@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arthur Paulino Malgarisi Aguiar | Portfolio</title>
+  <link href='/style.css' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="logo.svg" >
+
+  <link rel="stylesheet" href="/assets/css/pages/index/index.css" />
+  <link rel="stylesheet" href="/assets/css/pages/contato/contato.css" />
+  <link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  onload="this.onload=null;this.rel='stylesheet'" rel="preload" />
+<noscript>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+</noscript>
+  <script defer type="text/javascript" src="/main.js"></script>
+  <script async="async" src="/assets/js/nav-header.js"></script>
+  <meta name="description" content="Portfólio de Arthur Paulino Malgarisi Aguiar, desenvolvedor Front-End . Explore projetos, experiências e entre em contato." />
+
+</head>
+
+
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><p>Arthur Malgarisi</p></div>
+      <ul class="links">
+        <li><a href="/index.html" >Home</a></li>
+        <li><a href="/projetos.html" >Projetos</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+        <li> <a href="/contato.html"class="selected">Contato</a>
+        </li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="/index.html" class="selected">Home</a></li>
+      <li><a href="/projetos.html">Projetos</a></li>
+      <li><a href="/sobre.html">Sobre</a></li>
+      <li><a href="/contato.html">Contato</a></li>
+    </div>
+  </header>
+    <section id="formulario">
+        <form id="contact-form">
+            <label>Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required />
+            
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="Digite seu e-mail" required />
+            
+            <label>Mensagem</label>
+            <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+            
+            <button id="submit-btn" type="submit" style="background-color: var(--secondary-color);">Enviar mensagem</button>
+        </form>
+    </section>
+    
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("ELA1db2qznGPE1PMV"); 
+        })();
+    
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            emailjs.sendForm('service_epdnwjd', 'template_d6220p4', this)
+                .then(function() {
+                    alert('Mensagem enviada com sucesso!');
+                }, function(error) {
+                    alert('Ocorreu um erro ao enviar sua mensagem, tente novamente.');
+                    console.log('Erro:', error);
+                });
+        });
+    </script>
+    
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-section">
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://www.linkedin.com/in/arthur-malgarisi-aguiar-624860237/">
+                <img src="https://img.icons8.com/color/24/000000/linkedin.png" alt="LinkedIn" />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.instagram.com/arthurmalgarisi/">
+                <img src="https://img.icons8.com/fluent/24/000000/instagram-new.png" alt="Instagram" />
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://wa.me/5548996688446?text=Olá%20vim%20pelo%20site%20do%20seu%20portfólio!">
+                <img src="https://img.icons8.com/color/24/000000/whatsapp.png" alt="WhatsApp" />
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="mailto:arthurmalgarisi@gmail.com">
+                <img src="https://img.icons8.com/color/24/000000/gmail-new.png" alt="Email" />
+                E-mail
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/ArthurMalgarisi">
+                <img src="https://img.icons8.com/fluent/24/000000/github.png" alt="GitHub" />
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <p class="footer-description">
+            Desenvolvedor apaixonado por tecnologia e inovação. Vamos conversar e construir algo incrível juntos!
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Arthur Paulino Malgarisi Aguiar &copy; 2024 - Todos os direitos reservados
+      </div>
+    </footer>
+    
+
+    
+</body>
+
+</html>
